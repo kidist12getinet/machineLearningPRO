@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
+import xgboost as xgb
 import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np

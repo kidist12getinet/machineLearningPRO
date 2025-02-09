@@ -1,73 +1,76 @@
-#Stock Price Prediction - Machine Learning Project
 
-Overview
 
-This project is a machine learning-based stock price prediction system that forecasts the closing stock price based on historical financial data.
-The model is implemented using XGBoost and deployed using FastAPI for real-time predictions.
+```markdown
+# Stock Price Prediction - Machine Learning Project
 
-Features
+## Overview
 
-Data Preprocessing: Cleans and scales stock market data
+This project is a **machine learning-based stock price prediction system** that forecasts the closing stock price based on historical financial data. The model is implemented using **XGBoost** and deployed using **FastAPI** for real-time predictions.
 
-Machine Learning Model: Uses XGBoost for regression-based prediction
+## Features
 
-API Deployment: Provides real-time stock price predictions via FastAPI
+- **Data Preprocessing**: Cleans and scales stock market data.
+- **Machine Learning Model**: Uses XGBoost for regression-based prediction.
+- **API Deployment**: Provides real-time stock price predictions via FastAPI.
+- **Web Interface**: A simple UI for user interaction.
+- **Live Deployment**: Access the live application at [https://machinelearningpro-4.onrender.com](https://machinelearningpro-4.onrender.com).
 
-Web Interface: A simple UI for user interaction
+## Files and Directories
 
-Files and Directories
+- `main.py` - FastAPI backend for the model prediction API.
+- `index.html` - Frontend user interface for input and prediction display.
+- `requirements.txt` - Dependencies required to run the project.
+- `xgboost_model.pkl` - Trained XGBoost model.
+- `standard_scaler.pkl` - Preprocessing scaler for data normalization.
+- `stock.csv` - Dataset used for model training.
+- `stockpro.ipynb` - Jupyter Notebook containing exploratory data analysis and model training steps.
 
-main.py - FastAPI backend for the model prediction API
+## Installation and Setup
 
-index.html - Frontend user interface for input and prediction display
+### 1. Clone the Repository
 
-requirements.txt - Dependencies required to run the project
-
-xgboost_model.pkl - Trained XGBoost model
-
-standard_scaler.pkl - Preprocessing scaler for data normalization
-
-stock.CSV - Dataset used for model training
-
-stockpro.ipynb - Jupyter Notebook containing exploratory data analysis and model training steps
-
-Installation and Setup
-
-#1. Clone the Repository
-
-git clone [https://github.com/kidist12getinet/machineLearningPRO.git]
+```bash
+git clone https://github.com/kidist12getinet/machineLearningPRO.git
 cd stock-price-prediction
+```
 
-#2. Install Dependencies
+### 2. Install Dependencies
 
-Ensure you have Python 3.8+ installed. Then, install the required packages:
+Ensure you have **Python 3.8+** installed. Then, install the required packages:
 
+```bash
 pip install -r requirements.txt
+```
 
-#3. Run the FastAPI Server
+### 3. Run the FastAPI Server
 
+Start the FastAPI server:
+
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
 
-#4. Access the Web UI
+### 4. Access the Web UI
 
 Once the server is running, open your browser and go to:
 
-http://127.0.0.1:8000/
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 Enter stock values and get predictions.
 
-API Endpoints
+## API Endpoints
 
-1. Root Endpoint (GET /************************************************************************ )
+### 1. Root Endpoint (GET /)
 
 Returns the frontend HTML page.
 
-2. Prediction Endpoint (POST /predict************************************************************************ )
+### 2. Prediction Endpoint (POST /predict)
 
 Takes stock data as input and returns the predicted closing price.
 
-Example Request:
+**Example Request:**
 
+```json
 {
     "Open": 150.25,
     "High": 155.00,
@@ -75,27 +78,35 @@ Example Request:
     "Adj_Close": 152.00,
     "Volume": 1000000
 }
+```
 
-Example Response:
+**Example Response:**
 
+```json
 {
     "predicted_close": 152.67
 }
+```
 
-Future Improvements
+## Future Improvements
 
-Implement LSTM-based deep learning models for better accuracy
+- Implement LSTM-based deep learning models for better accuracy.
+- Integrate real-time stock market data API for dynamic predictions.
+- Deploy on AWS Lambda or Google Cloud Functions.
 
-Integrate real-time stock market data API for dynamic predictions
-
-Deploy on AWS Lambda or Google Cloud Functions
-
-License
+## License
 
 This project is for educational purposes only. Use it responsibly.
 
-#Author
+## Author
 
-Developed by: K/Mariam G.
-For inquiries, contact: [kidistgetinet072@gmail.com]
+Developed by: **K/Mariam G.**  
+For inquiries, contact: [kidistgetinet072@gmail.com](mailto:kidistgetinet072@gmail.com)
+```
+
+### Enhancements Made:
+- **Structured Sections**: Organized content into clear sections for better readability.
+- **Interactive Links**: Added clickable links for the live application and email.
+- **Code Blocks**: Used code blocks for commands and JSON examples for clarity.
+- **Emphasis**: Highlighted important aspects like Python version and author information.
 
